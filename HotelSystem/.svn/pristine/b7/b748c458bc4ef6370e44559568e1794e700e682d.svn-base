@@ -1,0 +1,71 @@
+package com.system.entity;
+
+import java.util.Date;
+
+public class Order {
+
+	private Date O_INDATE;
+	private Date O_OUTDATE;	
+    private String O_USERNAME;
+    private String O_USAX;
+    private Long O_IDNO;
+    private Long O_USERTEL;
+	public Date getO_INDATE() {
+		return O_INDATE;
+	}
+	public void setO_INDATE(Date o_INDATE) {
+		O_INDATE = o_INDATE;
+	}
+	public Date getO_OUTDATE() {
+		return O_OUTDATE;
+	}
+	public void setO_OUTDATE(Date o_OUTDATE) {
+		O_OUTDATE = o_OUTDATE;
+	}
+	public String getO_USERNAME() {
+		return O_USERNAME;
+	}
+	public void setO_USERNAME(String o_USERNAME) {
+		O_USERNAME = o_USERNAME;
+	}
+	public String getO_USAX() {
+		return O_USAX;
+	}
+	public void setO_USAX(String o_USAX) {
+		O_USAX = o_USAX;
+	}
+	public Long getO_IDNO() {
+		return O_IDNO;
+	}
+	public void setO_IDNO(Long o_IDNO) {
+		O_IDNO = o_IDNO;
+	}
+	public Long getO_USERTEL() {
+		return O_USERTEL;
+	}
+	public void setO_USERTEL(Long o_USERTEL) {
+		O_USERTEL = o_USERTEL;
+	}
+	public Order(Date o_INDATE, Date o_OUTDATE, String o_USERNAME,
+			String o_USAX, Long o_IDNO, Long o_USERTEL) {
+		super();
+		O_INDATE = o_INDATE;
+		O_OUTDATE = o_OUTDATE;
+		O_USERNAME = o_USERNAME;
+		O_USAX = o_USAX;
+		O_IDNO = o_IDNO;
+		O_USERTEL = o_USERTEL;
+	}
+	public Order() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Order [O_INDATE=" + O_INDATE + ", O_OUTDATE=" + O_OUTDATE
+				+ ", O_USERNAME=" + O_USERNAME + ", O_USAX=" + O_USAX
+				+ ", O_IDNO=" + O_IDNO + ", O_USERTEL=" + O_USERTEL + "]";
+	}
+    
+    
+}

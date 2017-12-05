@@ -1,0 +1,47 @@
+package com.system.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub	
+	  req.setCharacterEncoding("UTF-8");
+
+	    String login_user_name = req.getParameter("login_user_name");
+	    String login_password = req.getParameter("login_password");
+	    
+	    String result2 = req.getParameter("result2");
+	    
+	    System.out.println(login_user_name);
+	    System.out.println(login_password);
+	    System.out.println(result2);
+	    
+	  
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

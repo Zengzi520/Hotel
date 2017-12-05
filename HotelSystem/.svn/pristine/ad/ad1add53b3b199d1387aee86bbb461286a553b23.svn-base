@@ -1,0 +1,40 @@
+package com.system.servlet;
+
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.system.dao.hotel_dao;
+import com.system.entity.Hotel;
+import com.system.entity.Room_Class;
+
+
+
+@WebServlet("/test")
+public class HotelServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		req.setCharacterEncoding("UTF-8");
+		hotel_dao dao = new hotel_dao();
+		BigDecimal id = new BigDecimal(1);
+		Hotel hotel = dao.getHotel(id);
+		List<Room_Class> list = dao.getroomclass();
+		req.setAttribute("hotel", hotel);
+		req.setAttribute("list", list);
+		req.getRequestDispatcher("/index.jsp").forward(req, resp);
+	}
+
+}

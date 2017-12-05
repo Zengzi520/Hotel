@@ -1,0 +1,52 @@
+package com.system.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+
+import com.system.utils.StringUtils;
+
+@WebServlet("/forget")
+public class ForgetServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		req.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html;charset=UTF-8");
+
+		
+		String mobile = req.getParameter("mobile");/*手机号*/
+		String repassword = req.getParameter("repassword");/*密码*/
+		String yan = req.getParameter("yan");/*用户输入的验证码*/
+		Object object = req.getSession().getAttribute("YAN_IN_SESSION");
+		String yanz = null;
+	
+			yanz = object.toString();
+			System.out.println("忘记密码手机短信~~~" + yanz);	
+		/*--------ajax传输----开始---判断输入验证码是否为空-*/	
+		/*--------ajax传输----结束----*/
+			if (yan.equals(yanz)) {
+				System.out.println("准备跳转----------");
+				JOptionPane.showMessageDialog(null, "修改密码成功，请重新登录！"); 
+				resp.sendRedirect("/HotelSystem/index.jsp");
+			}else{
+				req.setAttribute("errormsg", "*修改信息不能为空*");
+				req.getRequestDispatcher("forget.jsp").forward(req, resp);
+
+			}
+	}
+}

@@ -1,0 +1,52 @@
+package com.system.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com_jdbc.BaseDao;
+import com_jdbc.entity.Dept;
+import com_jdbc.entity.Emp;
+import com_jdbc.utils.JDBCUtils;
+
+
+
+public class RegisterDao {
+	//����JDBC����
+	private JDBCUtils util = new JDBCUtils();
+	public RegisterDao() {
+		util.getConnection();
+	}
+
+	// ��ѯ������Ʒ
+	public List<Dept> queryAllDept() throws Exception {
+		String sql = "SELECT * FROM DEPT";
+		ArrayList<Object> params = new ArrayList<Object>();
+		List<Dept> list = util.findMoreRefResult(sql, params, Dept.class);
+		util.releaseConn();
+		return list;
+	}
+	//ʹ��jdbc����
+	public List<Dept> querryD(){
+		String sql = "SELECT * FROM DEPT";
+		List<Dept> select = (List<Dept>)BaseDao.select(sql, Dept.class,null);
+		return select;
+		
+	}
+	public List<Emp> quEmp(){
+		String sql = "SELECT * FROM Emp";
+		List<Emp> select =(List<Emp>)BaseDao.select(sql, Emp.class, null);
+		
+		
+		return select;
+		
+	}
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+.login_cont {
+	margin: 20px auto 0; 
+	 width: 340px;
+	/*  background-color: pink;   */
+
+}
+
+.login_cont .input_signup,.login_cont .input_signin {
+	 display: none; 
+	 width: 340px;
+	 margin: auto; 
+	
+	
+/* background-color: red;  */
+	 padding: 0px,auto;	 
+}
+
+.login_cont .active {
+	display: block;
+}
+
+.login_nav {
+	width: 300px;
+	height: 45px;
+	text-align: center;
+	margin-bottom: 20px;
+	/*  background-color: red;  */
+}
+
+.nav_slider {
+	display: inline-block;
+}
+
+.nav_slider p {
+	display: inline-block;
+	width: 75px;
+	line-height: 35px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.nav_slider .focus {
+	border-bottom: 2px solid #3cf;
+}
+
+.forget {
+	width: 100%;
+	text-align: right;
+}
+
+.forget p {
+	text-decoration: none;
+}
+.forget a {
+	color: rgb(127, 31, 89);}

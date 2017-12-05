@@ -1,0 +1,17 @@
+package com.system.dao;
+
+import com.system.utils.JDBCUtils;
+
+public class LoginIndexDao {
+        
+	private JDBCUtils util = new JDBCUtils();
+
+	public LoginIndexDao() {
+		util.getConnection();
+	}
+	
+	
+	
+	
+	
+}

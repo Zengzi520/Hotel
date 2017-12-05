@@ -1,0 +1,98 @@
+/**
+ * 订单
+ * 
+ */
+
+function changeCode() {
+	document.getElementById("randomCodeImg").src = "/HotelSystem/randomCode?"
+			+ new Date().getTime();
+}
+
+var i = 0;
+function addCustomer() {
+
+	i = i + 1;
+	if (i < 2) {
+
+		var input1 = document.createElement('input');
+		input1.setAttribute('type', 'text');
+		input1.setAttribute('class', 'one');
+
+		var btn = document.getElementById("addInput");
+		btn.insertBefore(input1, null);
+
+	} else {
+		alert("每间房最多添加两位入住2人");
+	}
+}
+
+//创建Ajax对象
+
+function getAjax() {
+	try {
+		ajax = new XMLHttpRequest();
+	} catch (e) {
+		// TODO: handle exception
+		ajax = new ActiveXObject();
+	}
+	return ajax;
+}
+
+function getSum2() {
+
+	var total = document.getElementById("totalPrice").value;
+
+	total = "568";
+
+	document.getElementById("totalPrice").innerHTML = total;
+	document.getElementById("totalPrice1").innerHTML = total;
+}
+function getSum1() {
+	var total = document.getElementById("totalPrice").value;
+	total = "284";
+	document.getElementById("totalPrice").innerHTML = total;
+	document.getElementById("totalPrice1").innerHTML = total;
+}
+
+/**
+ * 更新时间
+ */
+function Complay_Date(){
+	var date1 = document.getElementById("date1").value;
+	var date2 = document.getElementById("date2").value;
+	console.debug(date1+"-------------");
+	console.debug(date2+"-------------");
+
+	t = dateDiff(date2, date1);
+	document.getElementById("lifeTime").innerHTML ="入住："+ t +"天";
+}
+
+/**
+ * 计算时间函数，返回日历时间差
+ */
+function dateDiff(date1, date2) {
+	var type1 = typeof date1, type2 = typeof date2;
+	if (type1 == 'string')
+		date1 = stringToTime(date1);
+	else if (date1.getTime)
+		date1 = date1.getTime();
+	if (type2 == 'string')
+		date2 = stringToTime(date2);
+	else if (date2.getTime)
+		date2 = date2.getTime();
+	return (date1 - date2) / (1000 * 60 * 60 * 24); // 结果是小时
+}
+
+/**
+ * 字符串转成Time所需方法
+ */
+function stringToTime(string) {
+	var f = string.split(' ', 2);
+	var d = (f[0] ? f[0] : '').split('-', 3);
+	var t = (f[1] ? f[1] : '').split(':', 3);
+	return (new Date(parseInt(d[0], 10) || null, (parseInt(d[1], 10) || 1) - 1,
+			parseInt(d[2], 10) || null, parseInt(t[0], 10) || null, parseInt(
+					t[1], 10)
+					|| null, parseInt(t[2], 10) || null)).getTime();
+
+}

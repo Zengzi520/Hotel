@@ -1,0 +1,380 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+ 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/login.css"> -->
+<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!-- <script type="text/javascript" src="js/form.js"></script> -->
+<script type="text/javascript" src="js/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/script/custom.js"></script>
+<script src="js/jquery.slider.min.js"></script>
+<link rel="stylesheet" href="css/jquery.slider.css" /> 
+
+
+
+<!--------- 设置图片轮播开始 ----------->
+	 <style type="text/css">
+      #bodier1 ul li{
+          float: left;
+          list-style: none;
+          margin: 5px;
+          padding: 10px;
+          border: 1px solid lightgrey;
+          text-align: center;
+          border-radius:50%;
+          
+       }
+       a{
+        text-decoration: none;     
+        }   
+       
+    </style>
+    
+    <script type="text/javascript">
+        var i=1;
+        var myTime;
+        function showImg(){
+           var img=document.getElementById("img");
+           img.src="image/"+i+".jpg";
+           
+           //设置样式
+           for(index=1;index<=3;index++){
+              var liobj=document.getElementById("li"+index);
+              if(index==i){
+                 liobj.style.backgroundColor="white";
+              }else{
+                 liobj.style.backgroundColor="transparent";
+              }            
+           }
+           i++;
+           if(i>3){
+             i=1;
+           }
+           myTime=setTimeout("showImg()",5000);       
+        }
+        function stopShowImg(){
+           clearTimeout(myTime);       
+        }
+         
+        /* 设置微信二维码开始 */
+					function showImg1() {
+						document.getElementById("wxImg").style.display = 'block';
+					}
+					function hideImg1() {
+						document.getElementById("wxImg").style.display = 'none';
+					}
+		 /* 设置微信二维码结束 */		
+		 	
+				</script>
+	<!--------- 设置图片轮播结束 ----------->
+  </head>
+  
+  
+  <body>
+    <div id="header" style="width: 100%; height: 10%">
+     
+       
+       <!--   头部菜单栏开始 -->
+		<nav class="navbar navbar-default navbar-fixed-top" id="nav">
+		<div class="container-fluid">		 
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<!-- <button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button> -->
+				<a class="navbar-brand" href="#">中软国际大酒店</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">首页<span class="sr-only">(current)</span>
+					</a>
+					</li>
+					<li class="wc"><a href="welcome.jsp">中软欢迎</a>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">
+						 国内酒店
+						 <span class="caret"></span>
+					</a>
+						 <ul class="dropdown-menu " id="dropdown-menu2">
+							<li class="one"><a href="#">北京</a>
+							</li>
+							<li class="two"><a href="#">上海</a>
+							</li>
+							<li class="three"><a href="#">南京</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">厦门</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">广州</a>
+							</li>
+						</ul> </li>
+				</ul>
+				
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default" > <p class="glyphicon glyphicon-search"></p></button>
+				</form>
+				
+				<!-- 天气预报开始 -->							 
+               <div class="weather">
+                <iframe width="450" scrolling="no" height="80" frameborder="0"
+					allowtransparency="true"
+					src="http://i.tianqi.com/index.php?c=code&id=2&color=%238d8d8d&icon=5&py=xiamen&num=2&site=15">
+				</iframe>
+               </div>>
+			  
+			   
+				<!-- 天气预报结束 -->
+				
+ 			<!-- 登录开始 -->
+ 			
+ 			<div class="div1" style="position: absolute; margin-top: -30px; margin-left: 1250px;">
+            <input type="button" class="openlogin" value="登录" onclick="return false;">
+            <input type="button" value="注册" class="zc" onclick="window.open('register.jsp')">
+            </div>	
+		     
+ 		    <div id="loginalert">
+		    <div class="pd20 loginpd">
+			<h3>
+				<i class="closealert fr"></i>
+			</h3>
+
+			<div class="loginwrap">
+
+				<div class="loginh">
+
+					<div class="fl">会员登录</div>
+
+					<div class="fr">
+						<a>还没有账号?</a><a id="sigup_now" href="register.jsp" >立即注册</a>
+					</div>
+
+					<div class="clear" style="position: absolute; margin-left: 353px;"><img alt="chacha" src="image/uploadify-cancel.png"></div>
+
+				</div>
+		<form>			
+			<div class="input_signin">
+				<input class="input" id="login_user_name" type="text"  placeholder="用户名">
+				<div class="hint"></div>
+				<input class="input" id="login_password" type="password"  placeholder="密码">
+				<div class="hint" ></div>
+						
+			<div id="slider1" class="slider"></div>
+			<script>
+			$("#slider1").slider({
+				callback: function(result) {
+					$("#result1").text(result);
+				}
+			});
+		</script>		
+				<input type="submit" id="button" class="button" name="button" value="登录">
+				<div class="forget">
+					<a href="#">忘记密码？</a>
+				</div>
+			</div>
+		</form>
+			</div>
+
+		</div>
+
+ 
+		<div class="thirdlogin">
+
+			<div class="pd50">
+				<h4>用第三方帐号直接登录</h4>
+
+				<ul>
+					<li id="sinal"><a href="#">微博账号登录</a>
+					</li>
+
+					<li id="qql"><a href="#">QQ账号登录</a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>   
+	      <!--    登录结束 --> 
+		
+		
+		
+		
+		
+				
+               <!--  <p class="glyphicon glyphicon-align-justify" style="font-size:20px; position: absolute; margin-left: 1460px; margin-top: 65px;"></p>  -->
+				<ul class="nav navbar-nav navbar-right" style="position: absolute; margin-left: 970px; margin-top: -10px;">
+					<!-- <li><a href="#">Link</a> 
+					</li>  -->
+					
+					<li class="dropdown" id="dropdown1"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false" ><p class="glyphicon glyphicon-align-justify"></p><!--  <span class="caret"> --></span>
+					</a>
+						<ul class="dropdown-menu" id="dropdown-menu1" style="width: 5px;">
+							<!-- <li><a href="#">Action</a>
+							</li> -->
+							<li><div class="icon1"><img alt="user" src="image/user.png" style="width: 25px;"></div><a href="#">登录</a>
+							</li>
+							<li><div class="icon2" ><img alt="login" src="image/login.png" style="width: 35px;"></div><a href="register.jsp" target="_blank">注册</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" class="weixin" onMouseOut="hideImg1()"  onmouseover="showImg1()">微信</a>
+							    <div id="wxImg" style="display:none;height:10px;back-ground:#f00;position:absolute;"><img alt="weixin" src="image/weixin.jpg"></div>
+							</li>
+						</ul></li>
+				</ul>
+			</div>
+
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid --> </nav>
+
+		<!--   头部菜单栏结束 -->
+         
+    </div>
+    <div id="bodier"  style="width: 100%; height: 80%">
+    <div id="bodier1">
+      <!--------- 设置图片轮播开始 ----------->
+        <img alt="#" src="image/1.jpg" id="img" onmouseover="stopShowImg()" onmouseout="showImg()" style="width: 100%">
+    <ul>
+        <li id="li1"><a href="#"></a></li>
+        <li id="li2"><a href="#"></a></li>
+        <li id="li3"><a href="#"></a></li>
+ 
+         
+    </ul> 
+      <!--------- 设置图片轮播结束 ----------->
+    </div>
+    <div id="bodier2">
+        <div class="bodier2-left">
+                
+        <h3 class="title">中软国际大酒店</h3><br/>
+        
+        <h3 class="name">Etc International Hotel</h3>
+        <p>全新升级的中软国际大酒店将为您带来更加舒心的温馨体验！
+                            从极具<br/>现代感的迎宾区到独匠新格的创意客房，高品质隔音门和sweet
+           bed<br/>是您优质睡眠的保证，更配合“15分钟满意”合同与24小时的贴心<br/>服务，
+                            领先同类酒店的高品质是我们的特质。我们承诺8小时便餐，<br/>
+           7点至10点提供自助式早餐，更有下午茶和酒吧服务，<br/>                            
+                           选择中软国际大酒店将会成为您可靠而舒心的家。</p>  
+                         
+        </div>
+        <div class="bodier2-right">
+            <img alt="#" src="image/woshou.jpg" style="width: 650px; height:380px;">
+        </div>
+       
+                           
+    </div>
+    
+    
+    <div id="bodier3">
+        <!-- <ul>
+           <li class="item1">
+              <span class="cicon"></span>
+              <span class="tip">
+                 <p><strong>艺乐空间</strong></p>
+                                                     全新设计美感与精致空间布局
+              </span>
+           </li>
+           <li class="item2">
+              <span class="cicon"></span>
+              <span class="tip">
+              <p><strong>甜梦之床</strong></p>
+                                                     独特、创新、现代的睡床概念
+              </span>
+           </li>
+           <li class="item2">
+              <span class="cicon"></span>
+              <span class="tip">
+             <p><strong>顺心的入住体验</strong></p>
+                15分钟满意保证
+              </span>
+           </li>
+           <li class="item2">
+              <span class="cicon"></span>
+              <span class="tip">
+             <p><strong>品质保证</strong></p> 
+                                                      舒适、关切、高效
+              </span>
+           </li>
+         
+        </ul> -->
+        <img alt="#" src="image/05.png">
+
+    </div>
+    
+    <div id="bodier4">
+        <h3>精选推广</h3>
+        <table>
+            <tr>
+               <td> <img alt="#" src="image/beijing.png">  </td>
+               <td> <img alt="#" src="image/beijing.png">  </td>
+               <td> <img alt="#" src="image/beijing.png">  </td>
+            </tr>
+            
+            <tr>
+               <td> <img alt="#" src="image/beijing.png">  </td>
+               <td> <img alt="#" src="image/beijing.png">  </td>
+               <td> <img alt="#" src="image/beijing.png">  </td> 
+            </tr>
+        
+        </table>
+        
+    </div>
+
+    </div>
+    <div id="footer"  style="width: 100%; height: 10%">
+        <a>Copyright (C) 中软国际大酒店  2017-2023, All Rights Reserved</a>
+       
+       <img alt="#" src="image/validate.gif">
+       
+       <a>沪ICP证041189号出版物经营许可证 新出发京批字第直0673号</a>
+
+    </div>
+    
+   <!--      下拉框伪类开始 -->
+  <!--   <script>    
+    $('li.dropdown').mouseover(function() {   
+     $(this).addClass('open');    }).mouseout(function() {$(this).removeClass('open');}); 
+    </script> -->
+
+  <!-- 	下拉框伪类结束 -->
+</body>
+</html>

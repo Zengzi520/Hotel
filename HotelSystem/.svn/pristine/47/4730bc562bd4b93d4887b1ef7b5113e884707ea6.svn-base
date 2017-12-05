@@ -1,0 +1,80 @@
+.login_cont {
+	margin: 20px auto 0; 
+	 width: 340px;
+	/*  background-color: pink;   */
+  
+}
+ 
+.input_signup1{
+	style="background-color: red"
+}
+.input_signin{
+	width: 340px;
+	height: 375px;
+	/* background-color: red; */
+}
+.login_cont .input_signup,.login_cont .input_signin {
+	 display: none; 
+	 width: 340px;
+	 margin: auto; 
+	
+	
+/* background-color: red;  */
+	 padding: 0px,auto;	 
+}
+
+.login_cont .active {
+	display: block;
+}
+
+.login_nav {
+	width: 300px;
+	height: 45px;
+	text-align: center;
+	margin-bottom: 20px;
+	/*  background-color: red;   */
+}
+
+.nav_slider {
+	display: inline-block;
+}
+
+.nav_slider p {
+	display: inline-block;
+	width: 75px;
+	line-height: 35px;
+	font-size: 18px;
+	text-decoration: none;	
+	font-family: Microsoft YaHei;
+}
+.nav_slider .focus {
+	border-bottom: 2px solid #3cf;
+}
+ .forget {
+	width: 100%;
+	text-align: right;
+	margin-top: 3px;
+}
+
+
+.forget p {
+	text-decoration: none;
+}
+.forget a {
+	color: rgb(127, 31, 89);
+	}
+	
+.input_signup input:focus {
+border-style: solid;
+
+box-shadow:0px 0px  5px 2px #aaa;
+}
+.input_signin input:focus {
+border-style: solid;
+
+box-shadow:0px 0px  5px 2px #aaa;
+}
+
+	
+	
+	

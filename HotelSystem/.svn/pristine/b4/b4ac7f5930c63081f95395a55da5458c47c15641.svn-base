@@ -1,0 +1,153 @@
+body{
+	background-color: #faf8f9;
+    overflow-y: scroll;
+    font-family: arial,"microsoft yahei",simsun,sans-self;
+    font-size: 12px;
+    
+}
+b, body, dd, div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, i, li, ol, p, small, span, td, textarea, th, ul {
+    padding: 0;
+    margin: 0;
+}
+.title h1{
+
+	margin: 40px 100px;
+	font-size: 30px;
+	color: orangered;
+}
+.title .top{
+	float: right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 150px;
+	text-align: right;
+	font-size: 18px;
+	margin: 20px;
+  }
+.title {
+	margin-top: 0px;
+	border-bottom: 2px solid rosybrown;
+}
+.content .contleft{
+	width: 20%;
+	float: left;
+	border-right: 1px solid darkgoldenrod;
+}
+
+.content .contleft div{
+	font-size: 20px;
+	padding: 30px;
+	border-bottom: 1px solid #66AFE9;
+}
+.content .contleft div:hover{
+	background-color: silver;
+	cursor:pointer;
+}
+.rghotel{
+	margin-left: 20%;
+	
+}
+.rghotel .titel{
+	border-bottom: 1px solid #632D4F;
+	padding : 20px;
+
+}
+.rghotel .titel ul li{
+	display: inline-block;
+	margin-left: 15px;
+}
+.rghotel .center ul li{
+	display: inline-block;
+	text-align: center;
+	width: 160px;
+	height: 120px;
+	border: 1px solid saddlebrown;
+	margin: 10px;
+}
+.reservetable{         
+     border: 1px solid #c9dae4;
+     font-size: 14px;
+     text-align: center;
+      }
+.reservetable thead tr td
+        {
+            color: #0d487b;
+            background: #f2f4f8;
+            line-height: 28px;
+            border: 1px solid #9cb6cf;
+            border-top: 1px solid #e9edf3;
+            font-weight: normal;
+            text-shadow: #e6ecf3 1px 1px 0px;
+            padding: 10px;     
+        }
+
+ .reservetable tbody tr td{
+            border-bottom: 1px solid #e9e9e9;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            color: #444;
+            border-top: 1px solid #FFFFFF;
+            padding: 10px;
+            word-break: break-all;
+            font-size: 12px;
+ }
+tr.alt td{
+     background: #ecf6fc;
+      }
+tr.over td{
+     background: #bcd4ec; /*这个将是鼠标高亮行的背景色*/
+     }
+     
+ .titel input{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.configorder{
+	margin-top: 15px;
+	text-align: right;
+	margin-right: 8%;
+}
+.configorder a{
+	margin-left: 5px;
+	font-size: 14px;
+font-weight: 700;
+line-height: 32px;
+border-radius: 3px;
+display: inline-block;
+color: #fff;
+background-color: #7f1f59;
+padding: 0 20px;
+text-align: center;
+}
+.hava_reserver .foot{
+	text-align: right;
+	margin-top: 30px;
+	margin-right: 100px;
+}
+.hava_reserver .conduct{
+	margin-left: 5px;
+	font-size: 14px;
+font-weight: 700;
+line-height: 32px;
+border-radius: 3px;
+display: inline-block;
+color: #fff;
+background-color: #7f1f59;
+padding: 0 20px;
+text-align: center;
+}
+.rgrecord{
+	padding-left: 20px;
+}
+.rgrecord .recordtitel{
+	padding-left: 30px;
+	padding-top: 10px;
+	border-bottom: 1px solid firebrick;
+}
+.rgrecord .recordcenter{
+	margin-top: 20px;
+}
+.rgrecord .recordcenter input{
+	margin: 0px 15px;
+}

@@ -1,0 +1,58 @@
+.content{
+	/*background-color: cornsilk;*/
+	margin: 0px 10%;
+}
+.content .lxus{
+	border-bottom: 1px solid rgb(224,224,224);
+	font-size: 22px;
+	font-weight: bold;
+	color: #F47920;/*橘色*/
+}/*rgb(102,102,102)浅色*/
+.title_head{
+	color: rgb(127, 31, 89);
+	margin: 15px auto 15px 0px;
+	font-size: 16px;;
+}
+table td{
+	color: #707070;
+	font-size: 15px;
+	border: 1px solid rgb(224,224,224);
+	
+}
+.tb_l{
+	text-align: right;
+    
+     background-color:rgb(242,246,241);
+}
+table{
+	border-left: 1px solid #707070;
+	border-right: 1px solid rgb(224,224,224);
+     border-top: 1px solid #707070;
+     border-bottom: 1px solid rgb(224,224,224);
+}
+.dash_dadada{
+	border-bottom: 1px dashed rgb(224,224,224);
+	margin:15px auto 15px 0px;
+}
+.yd #yd1{
+	font-size:22px;
+	font-family: "微软雅黑";
+	color: #F47920;/*橘色*/
+	margin-right: 3px;;
+}
+.yd #yd2{
+	font-size:14px;
+	font-family: "微软雅黑";
+	color: rgb(127, 31, 89);/*橘色*/
+	
+}
+p{
+	
+	color: #707070;
+}
+.footer{
+	background-color: pink;
+	height: 100px;
+}
+
+

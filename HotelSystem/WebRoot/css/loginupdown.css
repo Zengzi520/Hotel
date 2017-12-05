@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+#login_updown{
+	position: absolute;
+	margin-top: -170px;
+	margin-left:400px;
+
+	
+	
+}
+#login_updown .form{width:500px;height:500px;background:rgba(255,255,255,.8);border-radius:8px;box-shadow:0 0 40px -10px #000;margin:calc(50vh - 220px) auto;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+#login_updown h3{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
+#login_updown input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+#login_updown input:focus{border-bottom:2px solid #78788c}
+#login_updown p:before{content:attr(type);display:block;margin:30px 0 0;font-size:18px;color:#5a5a5a}
+#login_updown button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
+#login_updown button:hover{background:#78788c;color:#fff}
+#login_updown div{content:'Hi';position:absolute;bottom:-15px;right:-20px;background:#50505a;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
+#login_updown .CodeVer{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+#login_updown span{margin:0px 5px 1px 15px}
+
+

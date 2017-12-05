@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+
+body{
+	background:#e1dac8;color:#E1DAC8;
+}
+body,h1,h2,h3,h4,h5,h6, ul, dl, dd, dt, ol, li, p{font-family:"微软雅黑"," 黑体","宋体";  margin:0;padding:0;-webkit-text-size-adjust: none}
+
+#header .header-top .navbar{
+	height: 130px;
+}
+
+#header .header-top .navbar .navbar-brand {
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+#bs-example-navbar-collapse-1{
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 195px;
+}
+
+#bs-example-navbar-collapse-1 .weather{
+	position: absolute;
+	margin-top: -9px;
+	margin-left: 250px;
+
+}
+
+#bs-example-navbar-collapse-1 .navbar-form{
+	position: absolute;
+	margin-top: -55px;
+	margin-left: 240px;
+}
+
+#bs-example-navbar-collapse-1 .btn{
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 10px;
+}
+#bs-example-navbar-collapse-1 #bs-example-navbar-collapse-2{
+	position: absolute;
+	margin-top: -60px;
+	margin-left: 720px;
+}
+
+#bs-example-navbar-collapse-1 #bs-example-navbar-collapse-2 .dropdown-menu li{
+	text-align: right;
+}
+
+
+#header .header-mid{
+	position: absolute;
+	margin-top: 130px;
+}
+
+
+
+#header #login_updown{
+	position: absolute;
+ 	margin-top: 50px;
+	margin-left: 400px;
+
+}
+#header #login_updown .form{width:500px;height:500px;background:rgba(255,255,255,.8);border-radius:8px;box-shadow:0 0 40px -10px #000;margin:calc(50vh - 220px) auto;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+#header #login_updown h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
+#header #login_updown input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+#header #login_updown input:focus{border-bottom:2px solid #78788c}
+#header #login_updown p:before{content:attr(type);display:block;margin:30px 0 0;font-size:18px;color:#5a5a5a}
+#header #login_updown button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
+#header #login_updown button:hover{background:#78788c;color:#fff}
+#header #login_updown div{content:'Hi';position:absolute;bottom:-15px;right:-20px;background:#50505a;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
+#header #login_updown span{margin:0 5px 0 15px}
+
+
+#wxImg{
+	display: none;
+}
+#wxImg img{
+	position:absolute;
+	margin-left:30px;
+    top: -42px;
+	width: 60px;
+	height: 60px;
+}
+.weixin:hover::after{
+  transform:scale(1);
+  opacity: 1;
+}
+
+#bodier .bodier1{
+	border: 1px solid #eeeae9;
+	position: absolute;
+	margin-top: 750px;
+	margin-left:150px;
+	width:1000px;
+	height: 450px;
+}
+
+
+#bodier .bodier1 .bodier1-left{
+	position: absolute;
+	margin-top: 95px;
+	margin-left: 30px;
+}
+
+#bodier .bodier1 .bodier1-left .title{
+	color: #8d8d8d;
+}
+#bodier .bodier1 .bodier1-left .name{
+	color: #8d8d8d;  
+}
+#bodier .bodier1 .bodier1-left p{
+	color: #8d8d8d;   
+    font-size: 15px;
+}
+
+#bodier .bodier1 .bodier1-right{
+	position: absolute;
+	margin-top: 95px;
+	margin-left: 530px;
+}
+#bodier .bodier2 {
+	position: absolute;
+	margin-top: 1295px;
+	margin-left: 160px;
+}
+
+#bodier .bodier3{
+	position: absolute;
+	margin-top: 1495px;
+	margin-left: 160px;
+}
+#bodier .bodier3 h3{
+	
+	position: absolute;
+	margin-top: -5px;
+	margin-left: 460px;
+}
+#bodier .bodier3 tr td{
+    padding: 3px;
+}
+#bodier .bodier3 img{
+	width: 320px;
+}
+
+#footer{
+	position: absolute;
+	margin-top: 1900px;
+	margin-left: 100px;
+}
+
+#footer .container img{
+	width: 350px;
+}
+#footer .container .friendlink{
+	margin-left: -50px;
+	margin-top: 10px;
+}
+
+
+#footer .container .copyright p{
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

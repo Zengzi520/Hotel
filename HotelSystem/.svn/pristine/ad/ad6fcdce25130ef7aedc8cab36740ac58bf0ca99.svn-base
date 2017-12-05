@@ -1,0 +1,48 @@
+package com.system.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.system.utils.StringUtils;
+@WebServlet("/loginIndex")
+public class LoginIndexServlet extends HttpServlet{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp)
+    		throws ServletException, IOException {
+    	// TODO Auto-generated method stub
+    	req.setCharacterEncoding("UTF-8");
+    	String randomCode = req.getParameter("randomCode");
+    	String sessionRandomCode = (String)req.getSession().getAttribute("RANDOMCODE_IN_SESSION");
+    	if(!StringUtils.hasLength(randomCode)||!StringUtils.hasLength(sessionRandomCode)){
+    		req.setAttribute("errorMsg", "亲,验证码不能为空或请求以过时");
+    		req.getRequestDispatcher("/Login/login.jsp").forward(req, resp);
+    		return;
+    	}
+    	
+    	if(!randomCode.equals(sessionRandomCode)){
+    		req.setAttribute("errorMsg", "亲,验证码有误,请重新输入");
+    		req.getRequestDispatcher("/Login/login.jsp").forward(req, resp);
+    		return;
+    	}
+    	System.out.println("login");
+    	
+    	String username_tel = req.getParameter("username_tel");
+    	String password = req.getParameter("password");
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    }
+}

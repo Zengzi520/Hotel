@@ -1,0 +1,34 @@
+*{
+	margin: 0px;;
+}
+.main2 {
+	text-align: center;
+	padding-top: 50px;
+}
+.main2 .main_2{
+	
+	font-size: 17px;
+	margin-bottom: 50px;
+	margin-top: 5px;
+}
+.banner1{
+	
+	width: 100%;
+}
+
+}
+
+.banner1 ul li{
+	position: absolute;
+
+}
+#canyin p{
+	
+	margin-top: 10px;
+}
+h2{
+	color: rgb(127, 31, 89) ;
+}
+body{
+	background: white;
+}

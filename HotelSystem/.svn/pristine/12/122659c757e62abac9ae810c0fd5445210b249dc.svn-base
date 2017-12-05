@@ -1,0 +1,57 @@
+package com.system.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.system.utils.StringUtils;
+
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub	
+	  req.setCharacterEncoding("UTF-8");
+
+	    String login_mobile = req.getParameter("login_mobile");
+	    String login_password = req.getParameter("login_password");
+	    
+	    String result2 = req.getParameter("result2");
+	    
+	    System.out.println("登录手机号~~"+login_mobile);
+	    System.out.println(login_password);
+	    System.out.println(result2);
+	    if(StringUtils.hasLength(login_mobile)&&StringUtils.hasLength(login_password)&&("true".equals(result2))){
+	    	System.out.println("登录成功~~~~~");
+			resp.sendRedirect("/HotelSystem/index.jsp");    	
+	    }
+	    else{
+	    	resp.sendRedirect("/HotelSystem/register.jsp");
+	    }
+	
+	    
+	  
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+.logo_bar img{
+	width: 150px;
+	position: absolute;
+	left: 55px;
+	top:-10px;
+}
+.logo_bar .set_info{  /* 重置个人会员密码设置 */
+	text-align: center;
+	line-height: 100px;
+	border-left: 1px solid #E5E0E2; 
+	margin-left: 220px;
+	font-size: 21px;
+	padding-left: 30px;
+	color: rgb(127, 31, 89);
+	font-weight: bold;
+}
+.forget_footer {
+	
+	text-align: center;
+	padding-bottom: 30px;
+}
+.forget_footer .forget_list{
+	margin-top: 50px;
+	margin-bottom:10px;
+}
+.forget_footer a{
+	color: rgb(127, 31, 89);
+	margin: 30px;
+	font-size: 13px;	
+}
+.forget_footer a:HOVER {
+	text-decoration: underline;
+}
+
+
+

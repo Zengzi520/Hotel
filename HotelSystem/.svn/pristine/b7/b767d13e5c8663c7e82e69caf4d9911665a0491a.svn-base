@@ -1,0 +1,67 @@
+package com.system.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.system.utils.StringUtils;
+
+@WebServlet("/register")
+public class RegisterServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		req.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html;charset=UTF-8");
+
+		String user_name = req.getParameter("user_name");
+		String mobile = req.getParameter("mobile");
+		String repassword = req.getParameter("repassword");
+		Object object = req.getSession().getAttribute("YAN_IN_SESSION");
+		String yanz = null;
+		
+		if (object != null) {
+			yanz = object.toString();
+			System.out.println("session手机短信~~~" + yanz);
+		}
+
+		/*--------ajax传输----开始---判断输入验证码是否为空-*/
+		PrintWriter out = resp.getWriter();
+		String yan = req.getParameter("yan");
+		if (!StringUtils.hasLength(yan)) {
+			out.print("×验证码不能为空");
+		}
+		/*--------ajax传输----结束----*/
+
+		// 获取Session随机码的数据
+		System.out.println("servlet中用户输入的~~~~" + yan);
+
+		System.out.println(user_name + "   --   " + mobile + "   --   "
+				+ repassword);
+
+		// &&(yan.equals(yanz))
+		if (StringUtils.hasLength(user_name) && StringUtils.hasLength(mobile)
+				&& StringUtils.hasLength(repassword) && (yan.equals(yanz))) {
+			System.out.println("准备跳转----------");
+			resp.sendRedirect("/HotelSystem/index.jsp");
+		}else{
+			//z注册不成功
+			req.setAttribute("erroMSG", ""); //{erroMSG}
+			//返回register.jsp界面，带上提示信息，用户重新注册。
+		}
+
+	}
+}

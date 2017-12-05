@@ -1,0 +1,115 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC >
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>正式测试主页</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="js/template/css/style.css" />
+<script type="text/javascript" src="js/form.js"></script> 	 
+<script type="text/javascript" src="js/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/script/custom.js"></script>
+<script src="js/jquery.slider.min.js"></script> 
+<link rel="stylesheet" href="css/jquery.slider.css" /> 
+
+
+</head>
+
+<body>
+
+	<!-- -------顶部----开始----- -->
+ 	<!-- <div class="top"></div>
+	
+	 <div class="logo_bar">
+      <img alt="梦想家" src="img/logo.png">
+		<div class="common">
+			   -->
+      <div class="div1">
+            <input type="button" class="openlogin" value="登录" onclick="return false;">
+            <input type="button" value="注册" class="zc" onclick="window.open('register.jsp')">
+        </div>
+			
+	
+		
+	<div id="loginalert">
+		<div class="pd20 loginpd">
+			<h3>
+				<i class="closealert fr"></i>
+			</h3>
+
+			<div class="loginwrap">
+
+				<div class="loginh">
+
+					<div class="fl">会员登录</div>
+
+					<div class="fr">
+						<a>还没有账号?</a><a id="sigup_now" href="register.jsp" >立即注册</a>
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+		<form>			
+			<div class="input_signin">
+				<input class="input" id="login_user_name" type="text"  placeholder="用户名">
+				<div class="hint"></div>
+				<input class="input" id="login_password" type="password"  placeholder="密码">
+				<div class="hint" ></div>
+						
+			<div id="slider1" class="slider"></div>
+	    <script>
+			$("#slider1").slider({
+				callback: function(result) {
+					$("#result1").text(result);
+				}
+			});
+		</script>		
+				<input type="submit" id="button" class="button" name="button" value="登录">
+				<div class="forget">
+					<a href="#">忘记密码？</a>
+				</div>
+			</div>
+		</form>
+
+			</div>
+
+		</div>
+
+ 
+		<div class="thirdlogin">
+
+			<div class="pd50">
+				<h4>用第三方帐号直接登录</h4>
+
+				<ul>
+					<li id="sinal"><a href="#">微博账号登录</a>
+					</li>
+
+					<li id="qql"><a href="#">QQ账号登录</a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

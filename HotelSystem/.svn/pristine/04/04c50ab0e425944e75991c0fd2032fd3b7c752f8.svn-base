@@ -1,0 +1,62 @@
+/**
+ * 订单
+ * 
+ */
+
+          function changeCode() {
+		document.getElementById("randomCodeImg").src="/HotelSystem/randomCode?"+new Date().getTime();
+	    }
+       
+          var i = 0;
+        function addCustomer() {
+        	
+        	i=i+1;
+        	if(i<2){
+        		
+        		var input1 = document.createElement('input');
+        		input1.setAttribute('type', 'text');
+        		input1.setAttribute('class', 'one');
+        		
+        		var btn=document.getElementById("addInput");
+        		btn.insertBefore(input1, null);
+        		
+        		
+        	}else{
+        		alert("每间房最多添加两位入住2人");
+        	}
+		}
+        
+        
+        
+        
+//创建Ajax对象
+        
+        function getAjax() {
+        	try {
+        		ajax=new XMLHttpRequest();
+        	} catch (e) {
+        		// TODO: handle exception
+        		ajax=new ActiveXObject();
+        	}
+        	return ajax;
+        }
+        
+        function getSum2() {
+			
+        	
+        	var total = document.getElementById("totalPrice").value;
+        	
+        	total="568";
+        	
+        	document.getElementById("totalPrice").innerHTML=total;
+        	document.getElementById("totalPrice1").innerHTML=total;
+		}
+      function getSum1() {
+    	  var total = document.getElementById("totalPrice").value;
+    	  total="284";
+      	document.getElementById("totalPrice").innerHTML=total;
+      	document.getElementById("totalPrice1").innerHTML=total;
+	}
+ 
+        
+        
